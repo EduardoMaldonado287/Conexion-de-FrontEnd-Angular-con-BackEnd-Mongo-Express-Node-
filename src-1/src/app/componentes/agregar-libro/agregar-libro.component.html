@@ -1,0 +1,47 @@
+<div class="card mt-4">
+    <div class="card-header">
+        Agregar Libros
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="enviarDatos()" [formGroup]="formularioDeLibros">
+            <div class="mb-3">
+              <label for="" class="form-label">ISBN</label>
+              <input formControlName="isbn"
+                type="text"
+                class="form-control" 
+                aria-describedby="helpId" placeholder="Ingresa el isbn del libro">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Título</label>
+              <input formControlName="titulo" type="text"
+                class="form-control" 
+                aria-describedby="helpId" placeholder="Ingresa el titulo del libro">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Autor</label>
+              <input formControlName="autor" type="text"
+                class="form-control" 
+                aria-describedby="helpId" 
+                placeholder="Ingresa el nombre del autor">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Año</label>
+              <input formControlName="anio" type="text"
+                class="form-control" 
+                aria-describedby="helpId" 
+                placeholder="Ingresa el año de edicion del libro">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Editorial</label>
+              <input formControlName="editorial" type="text"
+                class="form-control" 
+                aria-describedby="helpId" 
+                placeholder="Ingresa el nombre de la editorial">
+            </div>
+            <div class="btn-group" role="group" aria-label="Button group name">
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" class="btn btn-danger ms-3" routerLink="/listar-libro">Cancelar</button>
+            </div>    
+        </form>
+    </div>
+</div>
